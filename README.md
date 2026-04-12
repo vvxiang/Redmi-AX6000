@@ -41,4 +41,13 @@ TCP Keep-alive 间隔（s）1800
 网络加速设置
 全锥形 NAT → XT_FULLCONE_NAT（更佳的兼容性）
 
+这是 Mihomo（Meta Core） v1.19.6引入的兼容性问题。
+复制 UI 面板（必须先做）：
+cp -pdr /usr/share/openclash/ui /etc/openclash/ui
+
+修改 yml_change.sh 阻止插入 external-ui：
+vi /usr/share/openclash/yml_change.sh
+
+把整行注释掉（在前面加 #）或直接删除：
+Value['external-ui']='ui';
 ```
