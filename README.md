@@ -48,6 +48,6 @@ cp -pdr /usr/share/openclash/ui /etc/openclash/ui
 修改 yml_change.sh 阻止插入 external-ui：
 vi /usr/share/openclash/yml_change.sh
 
-把整行注释掉（在前面加 #）或直接删除：
-Value['external-ui']='ui';
+修改为以下新位置
+Value['external-ui']='/etc/openclash/ui';
 ```
